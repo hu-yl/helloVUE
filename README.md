@@ -1,4 +1,4 @@
-# SmileVue 简介
+# helloVue 简介
 
 > 使用了Vue的技术，完成移动端商城的基本功能。
 
