@@ -4,11 +4,11 @@
             <van-nav-bar  title="会员中心" />
         </div>
         <div class="top">
-           <img src="http://7xjyw1.com1.z0.glb.clouddn.com/touxiang001.jpg" class="top-img" />
+           <img src="https://avatars0.githubusercontent.com/u/29880145?v=4" class="top-img" />
         </div>
         <div class="login">
-            <div><van-button type="warning">我要登录</van-button></div>
-            <div><van-button type="primary">我要注册</van-button></div>
+            <div><van-button type="warning" @click='goLoginPage'>我要登录</van-button></div>
+            <div><van-button type="primary" @click='goRegisterPage'>我要注册</van-button></div>
         </div>
         <div>
             <van-cell-group>
@@ -26,7 +26,14 @@
 
 <script>
     export default {
-        
+         methods: {
+            goLoginPage() {
+                this.$router.push({name:'Login'})//name:跳转的页面，query携带的参数
+            },
+             goRegisterPage() {
+                this.$router.push({name:'Register'})//name:跳转的页面，query携带的参数
+            }
+        },
     }
 </script>
 

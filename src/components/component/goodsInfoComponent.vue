@@ -19,7 +19,8 @@
         },
         methods: {
             goGoodsPage() {
-                this.$router.push({name:'Goods',query:{goodsId:this.goodsId}})
+                console.log(this.goodsId)
+                this.$router.push({name:'Goods',query:{goodsId:this.goodsId}})//name:跳转的页面，query携带的参数
             }
         },
     }

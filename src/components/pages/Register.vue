@@ -23,8 +23,7 @@
                 label="密码" 
                 placeholder="请输入密码"
                 required
-                :error-message="passwordErrorMsg"
-               
+               :error-message="passwordErrorMsg"
             />
             <div class="register-button">
                 <van-button type="primary" @click="registerAction" size="large" :loading="openLoading">马上注册</van-button>
@@ -52,7 +51,8 @@
                this.$router.go(-1)
            },
             registerAction(){
-                this.checkForm() && this.axiosRegisterUser()
+                this.checkForm() && this.axiosRegisterUser() 
+                //如果第一个不为true，第二个不执行
             },
 
            axiosRegisterUser(){
@@ -68,9 +68,8 @@
                .then(response=>{
                    console.log(response)
                    if(response.data.code==200){
-
                        Toast.success(response.data.message)
-                       this.$router.push('/')
+                       this.$router.push('/') //跳转到首页
                    }else{
                        console.log(response.data.message)
                        this.openLoading=false

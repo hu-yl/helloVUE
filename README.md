@@ -1,23 +1,45 @@
-# helloVue 简介
+# hello-shop
 
-> 使用了Vue的技术，完成移动端商城的基本功能。
-
-## 
-
-## Build Setup
-
-``` bash
-# install dependencies
+## Project setup
+```
 npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+##禁止用户手动缩放
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+##设置rem和px的比例
+      let htmlwidth = document.documentElement.clientWidth || document.body.clientWidth;
+      let htmlDom = document.getElementsByTagName('html')[0];
+      if (htmlwidth > 750){
+        htmlwidth = 750
+      }
+      htmlDom.style.fontSize = htmlwidth/20 + 'px';
+   
+##  npm i axios --save
+
+##  npm install vue-awesome-swiper --save

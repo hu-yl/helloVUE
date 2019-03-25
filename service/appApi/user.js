@@ -1,13 +1,12 @@
-const Router = require('koa-router')
-const mongoose = require('mongoose')
+const Router = require ('koa-router')
+const mongoose = require ('mongoose')
 
 let router = new Router()
 router.get('/',async(ctx)=>{
     ctx.body="这是用户操作首页"
 })
-
 router.post('/register',async(ctx)=>{
-   
+
     const User = mongoose.model('User')
     let newUser = new User(ctx.request.body)
 
@@ -37,9 +36,9 @@ router.post('/login',async(ctx)=>{
         console.log(result)
         if(result){
             let newUser = new User()
-            await newUser.comparePassword(password,result.password)
+            await newUser.comparePassword(password,result.password)//比对：传递的数据和数据库中的数据
             .then(isMatch=>{
-                ctx.body={code:200,message:isMatch}
+                ctx.body={code:200,message:isMatch}//isMath返回true或false
             })
             .catch(error=>{
                 console.log(error)
@@ -55,4 +54,4 @@ router.post('/login',async(ctx)=>{
 
 })
 
-module.exports =router
+module.exports=router;

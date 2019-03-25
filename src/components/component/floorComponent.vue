@@ -26,6 +26,7 @@
 </template>
 
 <script>
+//watch监视器，当数据发生变化时，实时更新
     export default {
         props:['floorData','floorTitle'],
         data() {
