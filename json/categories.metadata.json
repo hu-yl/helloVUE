@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"smile-vue.categories"},{"v":2,"unique":true,"key":{"ID":1},"name":"ID_1","ns":"smile-vue.categories","background":true}],"uuid":"85498c804541410b8cf645ad5aebd95e"}
